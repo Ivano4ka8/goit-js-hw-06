@@ -21,13 +21,11 @@ const images = [
 
 const galleryListEl = document.querySelector(".gallery");
 
-const createGallery = () => {
-  const galleryList = images
-    .map(
-      (image) =>
-        `<li class="gallery-item"> <img height = "318px" class = "gallery-img" src = ${image.url} alt = ${image.alt}> </li>`
-    )
-    .join("");
-  galleryListEl.insertAdjacentHTML("afterbegin", galleryList);
-};
-createGallery();
+const galleryList = images
+  .map(
+    (image) =>
+      `<li class="gallery-item"> <img height = "318px" class = "gallery-img" src = ${image.url} alt = ${image.alt}> </li>`
+  )
+  .join("");
+
+galleryListEl.insertAdjacentHTML("afterbegin", galleryList);
